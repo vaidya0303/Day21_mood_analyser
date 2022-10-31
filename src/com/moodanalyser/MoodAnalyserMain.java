@@ -41,4 +41,4 @@ public class MoodAnalyserMain {
                         MoodAnalysisException.Exception_Type.EMPTY);
         }
     }
-}
+ }

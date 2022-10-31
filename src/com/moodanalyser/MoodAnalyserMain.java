@@ -1,9 +1,8 @@
 package com.moodanalyser;
 
 /**
- * UC1 :- Given a Message, ability to analyse and respond Happy or Sad Mood
- *       - Create MoodAnalyser Object
- *       - Call analyseMood function with message as parameter and return Happy or Sad Mood
+ * TC 1.2 :- Given “I am in Any Mood” message Should Return HAPPY
+ *         - To make the Test case pass analyseMood method need to check for Sad else return HAPPY
  */
 
 /**
@@ -21,5 +20,5 @@ public class MoodAnalyserMain {
             return "SAD";
         else
             return "HAPPY";
-     }
+    }
 }

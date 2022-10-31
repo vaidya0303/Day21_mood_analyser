@@ -1,29 +1,23 @@
 package com.moodanalyser;
 
 /**
- * Repeat TC 1.2 :-
- *
- * Given “I am in Happy Mood” message in Constructor Should Return SAD
- * To pass this Test Case when calling analyseMood method with no params should return HAPPY
+ * UC1 :- Given a Message, ability to analyse and respond Happy or Sad Mood
+ *       - Create MoodAnalyser Object
+ *       - Call analyseMood function with message as parameter and return Happy or Sad Mood
  */
 
 /**
  * create a class name as MoodAnalyserMain
  */
 public class MoodAnalyserMain {
-    private String message;
-
     /**
-     * create a default constructor name as MoodAnalyserMain
+     * create a constructor ,this is default constructor name as MoodAnalyserMain
      */
     public MoodAnalyserMain() {
     }
 
-    public MoodAnalyserMain(String message) {
-        this.message=message;
-    }
-    public String analyseMood() {
-        if (this.message.contains("Sad"))
+    public String analyseMood(String message) {
+        if (message.contains("Sad"))
             return "SAD";
         else
             return "HAPPY";

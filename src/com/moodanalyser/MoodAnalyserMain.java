@@ -1,15 +1,10 @@
 package com.moodanalyser;
 
 /**
- *  Refactor the code to take the mood message in Constructor
- * - Note:
- * - MoodAnalyser will have a message Field
- * - MoodAnalyser will have 2 Constructors –
- *   Default - MoodAnalyser() and with
- *   Parameters – MoodAnalyser(message)
- * - analyseMood method will change to
- *   support no parameters and use message
- *   Field defined for the Class
+ * Repeat TC 1.1 :-
+ *
+ * Given “I am in Sad Mood” message in Constructor Should  Return SAD
+ * To pass this Test Case when calling analyseMood method with no params should return SAD
  */
 
 /**
@@ -17,8 +12,9 @@ package com.moodanalyser;
  */
 public class MoodAnalyserMain {
     private String message;
+
     /**
-     * create a constructor ,this is default constructor name as MoodAnalyserMain
+     * default constructor name as MoodAnalyserMain
      */
     public MoodAnalyserMain() {
     }

@@ -1,6 +1,5 @@
 package com.moodanalyser;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -9,26 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertSame;
  * create a class name as MoodAnalyserTest
  */
 public class MoodAnalyserTest {
-
-
     @Test
-    public void given_NullMood_Should_Throw_MoodAnalysisException() {
-        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain(null);
-        String mood;
-        try {
-            mood = moodAnalyser.analyseMood();
-        } catch (MoodAnalysisException e) {
-            Assertions.assertSame(MoodAnalysisException.Exception_Type.NULL, e.type);
-        }
-    }
-    @Test
-    public void given_EmptyMood_Should_Throw_MoodAnalysisException() {
-        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain("");
-        String mood;
-        try {
-            mood = moodAnalyser.analyseMood();
-        } catch (MoodAnalysisException e) {
-            Assertions.assertSame(MoodAnalysisException.Exception_Type.EMPTY, e.type);
-        }
+    public void given_AnyMood_Should_Return_HAPPY() {
+        /**
+         * create object for  MoodAnalyserMain class
+         */
+        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain();
+        String mood = moodAnalyser.analyseMood("I am in Any Mood");
+        assertSame("HAPPY", mood);
     }
 }

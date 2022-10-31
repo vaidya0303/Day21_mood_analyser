@@ -1,24 +1,39 @@
 package com.moodanalyser;
 
 /**
- * TC 1.2 :- Given “I am in Any Mood” message Should Return HAPPY
- *         - To make the Test case pass analyseMood method need to check for Sad else return HAPPY
+ * TC 2.1 :-
+ * Given Null Mood Should Return Happy
+ *
+ * To make this Test Case pass Handle
+ * NULL Scenario using try catch and
+ * return Happy
  */
 
 /**
  * create a class name as MoodAnalyserMain
  */
 public class MoodAnalyserMain {
+    private String message;
+
     /**
-     * create a constructor ,this is default constructor name as MoodAnalyserMain
+     * create a default constructor name as MoodAnalyserMain
      */
+
     public MoodAnalyserMain() {
     }
 
-    public String analyseMood(String message) {
-        if (message.contains("Sad"))
-            return "SAD";
-        else
+    public MoodAnalyserMain(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood() {
+        try {
+            if (this.message.contains("Sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch (NullPointerException e) {
             return "HAPPY";
+        }
     }
 }

@@ -1,10 +1,10 @@
 package com.moodanalyser;
 
 /**
- * Repeat TC 1.1 :-
+ * Repeat TC 1.2 :-
  *
- * Given “I am in Sad Mood” message in Constructor Should  Return SAD
- * To pass this Test Case when calling analyseMood method with no params should return SAD
+ * Given “I am in Happy Mood” message in Constructor Should Return SAD
+ * To pass this Test Case when calling analyseMood method with no params should return HAPPY
  */
 
 /**
@@ -14,7 +14,7 @@ public class MoodAnalyserMain {
     private String message;
 
     /**
-     * default constructor name as MoodAnalyserMain
+     * create a default constructor name as MoodAnalyserMain
      */
     public MoodAnalyserMain() {
     }
@@ -27,5 +27,5 @@ public class MoodAnalyserMain {
             return "SAD";
         else
             return "HAPPY";
-    }
+     }
 }
